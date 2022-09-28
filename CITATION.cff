@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Collins"
+  given-names: "Kristina"
+  orcid: "https://orcid.org/0000-0002-3816-1948"
+title: "wa5frf-plots"
+version: 1.0.0
+# doi: 10.5281/zenodo.1234
+date-released: 2022-09-27
+url: "https://github.com/KCollins/wa5frf-plots"
