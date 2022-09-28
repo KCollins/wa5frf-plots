@@ -1,0 +1,12 @@
+urllib3
+pandas
+plotly.express
+wget
+plotly
+os
+data
+datetime
+math
+numpy
+sympy
+time
