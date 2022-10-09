@@ -7,10 +7,9 @@
 % OpenCV alternative - or even a current MATLAB class - that works as well.
 
 
-clear all
+% clear all
 load data/spectrograms.mat       % load spectrogram images
 clearvars T
-% TODO: Import .mat file.
 
 % filename = 'multipath2020_10_03';
 % mintime = 12; % Bottom of figure, in hours UTC
@@ -23,7 +22,8 @@ maxtime = 15.71; % Top of figure, in hours UTC
 
 
 I = eval(filename); % (quick and dirty)
-im = imadjust(I,[0.3 0.7],[]);%stretchlim(I),[]);
+im = imadjust(I,[0.3 0.7],[]);
+im = imadjust(I, stretchlim(I),[]);
 
 
 % Set bounds of cropped image:
@@ -31,7 +31,9 @@ minfreq = 995;  % The leftmost edge of the image corresponds to 995 Hz
 maxfreq = 1005; % The rightmost edge corresponds to 1005 Hz
 
 
-traces = {'1E','2E', '1F', '2F', '3F'};
+traces = {'1E', '1F', '2F', '3F'};
+
+
 
 for tracenum = 1:length(traces) 
     trace = traces{tracenum} 
@@ -56,4 +58,4 @@ for tracenum = 1:length(traces)
     
 end
 
-writetable(T, strcat(filename, '.csv'))
+% writetable(T, strcat(filename, '.csv'))
